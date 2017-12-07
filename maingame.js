@@ -17,7 +17,8 @@ game = {
  	
  	startGame: function (wrd) {
  		this.resetGuesses();
- 		this.currentWord = new Word(this.wordList[Math.floor(Math.random()* this.wordList.length)]);
+            this.currentWord = new Word(this.wordList[Math.floor(Math.random() * this.wordList.length)]);
+            console.log(this.currentWord)
  		this.currentWord.getLetters();
  		this.promptUser();
  	},
@@ -30,7 +31,7 @@ game = {
  		var self = this;
  		prompt.get(['guessLetter'], function(err, result){
  			console.log("You guessed: " + result.guessLetter);
- 			var manyGuessed = self.currentWord.checkLetter(result.guessLetter);
+ 			var manyGuessed = self.currentWord.checkLetters(result.guessLetter);
 
  			if(manyGuessed ==0) {
  				console.log("WRONG");
