@@ -3,10 +3,10 @@
 var letters = function(let){
 	this.charac = let;
 	this.appear = false;
-	this.letterRender = function(){
+	this.lettersRender = function(){
 		return !(this.appear) ? "_" : this.charac;
 	};
 };
 
-//exporting to pick up on maingame
+//exporting to pick up on words
 module.exports = letters;

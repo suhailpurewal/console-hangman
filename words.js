@@ -18,11 +18,10 @@ function Word(target) {
 		return this.found;
 	};
 
-	this.checkLetters = function(guessLetter) {
+	this.checkLetters = function(guessLetters) {
 		var toReturn = 0;
-
 		for (var i = 0; i < this.lets.length; i++) {
-			if (this.lets[i].charac == guessLetter){
+			if (this.lets[i].charac == guessLetters){
 				this.lets[i].appear = true;
 				toReturn++;
 			}
@@ -37,7 +36,6 @@ function Word(target) {
 		}
 		return string;
 	};
-
 }
 
 module.exports = Word;
